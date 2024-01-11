@@ -1,0 +1,23 @@
+
+img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  img {
+    width: 75%;
+    border-radius: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  img {
+    width: 55%;
+  }
+}
+
+swiper-container::part(bullet-active) {
+  background-color: rgba(255, 166, 0, 0.65);
+  padding: 0.1rem;
+}

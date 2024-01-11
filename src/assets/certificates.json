@@ -1,0 +1,19 @@
+[
+  {
+    "src": "assets/certificates/AWS-Cloud-Practitioner.jpg",
+    "alt": "AWS Cloud Practitioner Certification"
+  },
+  {
+    "src": "assets/certificates/N+.jpg",
+    "alt": "CompTIA Network+ Certification"
+  },
+  { "src": "assets/certificates/A+.jpg", "alt": "CompTIA A+ Certification" },
+  {
+    "src": "assets/certificates/AZ-900.jpg",
+    "alt": "Azure Fundamentals (AZ-900) Certification"
+  },
+  {
+    "src": "assets/certificates/THM-JRPenTester.png",
+    "alt": "TryHackMe Junior Penetration Tester Certification"
+  }
+]

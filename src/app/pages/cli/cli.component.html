@@ -1,0 +1,23 @@
+<div id="terminal" class="terminal-container" (click)="focusTextarea()" appLoadData
+    [dataSourceUrl]="'assets/projects.json'" (dataLoaded)="dataLoaded($event)">
+    <p>&copy; {{year}} Abdulrahman Almehdar. All rights reserved.</p>
+    <p>Use 'help' to list available commands.</p>
+    <div id="output" class="output-container">
+        @for(command of commands; let i = $index; track i){
+        <div class="commands">
+            <span> {{command.command}}</span>
+        </div>
+        <div [class]="command.class">
+            <span [innerHTML]="command.output"></span>
+        </div>
+        }
+    </div>
+    <div id="input" class="input-container">
+
+        <span class="prompt">Abdulrahman&#64;Almehdar:~{{directory}}$</span>
+        <span class="text">{{inputValue}}<span #cursor class="cursor"></span></span>
+
+        <textarea #textarea autofocus type="text" [(ngModel)]="inputValue"
+            (keydown)="executeCommand($event)"></textarea>
+    </div>
+</div>

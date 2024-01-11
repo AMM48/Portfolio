@@ -1,0 +1,38 @@
+<video muted autoplay id="backgroundVideo">
+    <source src="../../../assets/videos/dotsAnimation.mp4" type="video/mp4">
+</video>
+<main>
+    <div class="wrapper">
+        <section class="landing-section">
+            <div class="content landing-content" [@fadeAnimtaion]>
+                <div>
+                    <h1>Hey, I'm Abdulrahman Almehdar</h1>
+                    <h2>Web Developer</h2>
+                    <p>
+                        I Graduated from King Abdulaziz University with a bachelor's degree in Information Technology
+                        with a GPA of 4.87 / 5. I have a passion for web development and all things
+                        front-end and back-end.
+                        I enjoy exploring
+                        new technologies, especially in areas such as cloud computing and virtualization. Always
+                        eager to learn and adapt, I'm dedicated to creating and enhancing robust web solutions.
+                    </p>
+                </div>
+                <a class="projects-btn" href="#projects">View my projects</a>
+                <a class="cli-btn" href="/cli">Try CLI Version</a>
+            </div>
+        </section>
+
+        <section class="projects-section content" id="projects">
+            <h3>Projects</h3>
+            <app-project-card />
+        </section>
+
+        <section class="certificates-section content" id="certificates">
+            <h3>Certificates</h3>
+            <app-certificates-slider />
+        </section>
+
+        <app-footer></app-footer>
+
+    </div>
+</main>

@@ -1,0 +1,85 @@
+
+
+#backgroundVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; 
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+    z-index: 10;
+}
+
+.content {
+    padding: 5.5rem 5rem;
+    width: 100%;
+}
+
+
+.projects-btn {
+    font-size: clamp(1.8rem, 1vw + 1rem, 2.5rem);
+    border: 3px solid #fff;
+    padding: 2rem;
+    display: inline-block;
+    border-radius: 0;
+    transition: box-shadow 0.5s ease-out;
+}
+
+.cli-btn {
+    display: none;
+}
+
+/* .projects-btn:hover, .certs-btn:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+} */
+
+.projects-section{
+    min-height: 50vh;
+}
+.landing-content {
+    height: 100vh;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .landing-content > div {
+        padding: 0 20rem;
+    }
+    .landing-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .projects-btn {
+        border-color: rgba(255, 255, 255, 0.6);
+        color: rgba(255, 255, 255, 0.6);
+        transition: all 0.5s ease;
+    }
+
+    .projects-btn:hover, .cli-btn:hover {
+        border-color: rgba(255, 255, 255, 1);
+        color: rgba(255, 255, 255, 1);
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    .cli-btn {
+        border: 3px solid rgba(255, 255, 255, 0.5);
+        font-size: clamp(1.3rem, 1vw + 1rem, 2.2rem);
+        padding: 1.5rem;
+        border-radius: 0;
+        color: rgba(255, 255, 255, 0.5);
+        transition: all 0.5s ease-out;
+        display: inline;
+        margin-top: 2rem;
+        transition: all 0.5s ease;
+
+    }
+}

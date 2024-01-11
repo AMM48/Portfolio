@@ -1,0 +1,17 @@
+<ng-container appLoadData [dataSourceUrl]="'assets/projects.json'" (dataLoaded)="dataLoaded($event)">
+    @defer (on viewport){
+    <div [@staggerAnimation] class="grid grid-items">
+        @for (project of projects; track project.id;) {
+        <div class="container">
+            <h4>{{project.name}}</h4>
+            <p>
+                {{project.description}}
+            </p>
+            <a class="explore-btn" href="{{project.link}}" target="_blank" rel="noopener noreferrer">Explore
+                &#x2197;</a>
+        </div>
+        }
+    </div> } @placeholder {
+    <div></div>
+    }
+</ng-container>

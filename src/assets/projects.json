@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Expense Tracker",
+    "description": "Expense Tracking mobile app created with flutter, uses realmDB with atlas device sync to sync users data to a mongoDB cluster on the cloud.\nThe application leverages the power of Machine Learning to help classify each transaction before adding it, and also provides monthly spending forecast.",
+    "link": "https://github.com/AMM48/Expense-Tracker"
+  },
+  {
+    "id": 2,
+    "name": "Online Grocery Store",
+    "description": "Online Grocery Store is a web app created using HTML, CSS, React, and PHP. It offers a user-friendly interface that allows customers to browse, select, and purchase groceries and household items with ease and convenience.",
+    "link": "https://github.com/AMM48/Agora-Market"
+  },
+  {
+    "id": 3,
+    "name": "Organizo",
+    "description": "Organizo is an automated file organization tool. It monitors the Downloads directory and automatically moves files to their designated folders based on their extensions. The script handles various file types, supports notifications, and ensures smooth operation even with temporary or in-use files. It’s a simple yet efficient solution for keeping your downloads folder clutter-free and well-organized.",
+    "link": "https://github.com/AMM48/Organizo"
+  }
+]

@@ -1,0 +1,11 @@
+<swiper-container effect="coverflow" pagination=true pagination-clickable=true coverflow-effect-slide-shadows=false
+    grab-cursor="true" coverflow-effect-depth="1500" coverflow-effect-scale="1.3" auto-height="true" zoom="true"
+    appLoadData [dataSourceUrl]="'assets/certificates.json'" (dataLoaded)="dataLoaded($event)">
+    @for (image of images; let i = $index; track i) {
+    <swiper-slide lazy="true">
+        <div class="swiper-zoom-container">
+            <img src={{image.src}} alt={{image.alt}} loading="lazy">
+        </div>
+    </swiper-slide>
+    }
+</swiper-container>
