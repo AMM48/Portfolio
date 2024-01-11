@@ -16,6 +16,10 @@ export const fadeAnimtaion = trigger('fadeAnimtaion', [
               style({ transform: 'translateY(300px)', opacity: 0 }),
               animate('500ms 800ms ease-out', style({ transform: 'translateY(0)', opacity: 1 })),
             ], {optional: true}),
+            query('.cli-btn', [
+              style({ transform: 'translateX(300px)', opacity: 0 }),
+              animate('800ms ease-out', style({ transform: 'translateY(0)', opacity: 1 }))
+            ], { optional: true })
           ])
       ]),
     ])

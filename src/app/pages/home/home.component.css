@@ -1,5 +1,4 @@
 
-
 #backgroundVideo {
     position: fixed;
     top: 0;
@@ -22,24 +21,17 @@
     width: 100%;
 }
 
-
 .projects-btn {
     font-size: clamp(1.8rem, 1vw + 1rem, 2.5rem);
     border: 3px solid #fff;
     padding: 2rem;
     display: inline-block;
-    border-radius: 0;
-    transition: box-shadow 0.5s ease-out;
+    border-radius: 1rem;
 }
 
 .cli-btn {
     display: none;
 }
-
-/* .projects-btn:hover, .certs-btn:hover {
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.2);
-} */
 
 .projects-section{
     min-height: 50vh;
@@ -71,15 +63,16 @@
         background-color: rgba(255, 255, 255, 0.1);
     }
     .cli-btn {
-        border: 3px solid rgba(255, 255, 255, 0.5);
+        position: fixed;
+        border: 2px solid rgba(255, 255, 255, 0.5);
         font-size: 1.8rem;
-        padding: 1.5rem;
-        border-radius: 0;
+        padding: 0.5rem 2rem;
         color: rgba(255, 255, 255, 0.5);
         transition: all 0.5s ease-out;
         display: inline;
-        margin-top: 2rem;
+        margin: 4rem 4rem 0 0;
         transition: all 0.5s ease;
-
+        top: 0;
+        right: 0;
     }
 }
