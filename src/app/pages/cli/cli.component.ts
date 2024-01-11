@@ -185,31 +185,31 @@ export class CliComponent implements OnInit {
     } else if (this.directory === '/certificates' && this.currentCommand.split(' ')[1] === 'aws-cloud-practitioner.txt') {
       this.commands.push({
         command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-        output: `To view the AWS Cloud Practitioner Certificate <a href="https://github.com/AMM48/Portfolio/" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
+        output: `To view the AWS Cloud Practitioner Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/AWS-Cloud-Practitioner.jpg" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
         class: 'color'
       });
     } else if (this.directory === '/certificates' && this.currentCommand.split(' ')[1] === 'comptia-network+.txt') {
       this.commands.push({
         command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-        output: `To view the CompTIA Network+ Certificate <a href="https://github.com/AMM48/Portfolio" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
+        output: `To view the CompTIA Network+ Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/N%2B.jpg" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
         class: 'color'
       });
     } else if (this.directory === '/certificates' && this.currentCommand.split(' ')[1] === 'comptia-a+.txt') {
       this.commands.push({
         command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-        output: `To view the CompTIA A+ Certificate <a href="https://github.com/AMM48/Portfolio" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
+        output: `To view the CompTIA A+ Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/A%2B.jpg" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
         class: 'color'
       });
     } else if (this.directory === '/certificates' && this.currentCommand.split(' ')[1] === 'az-900.txt') {
       this.commands.push({
         command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-        output: `To view the AZ-900 Certificate <a href="https://github.com/AMM48/Portfolio" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
+        output: `To view the AZ-900 Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/AZ-900.jpg" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
         class: 'color'
       });
     }else if (this.directory === '/certificates' && this.currentCommand.split(' ')[1] === 'thm-jrpentester.txt') {
       this.commands.push({
         command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-        output: `To view the THM-JRPenTester Certificate <a href="https://github.com/AMM48/Portfolio" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
+        output: `To view the TryHackMe Jr Penetration Tester Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/THM-JRPenTester.png" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
         class: 'color'
       });
     }
