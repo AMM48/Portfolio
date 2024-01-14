@@ -145,8 +145,7 @@ export class CliComponent implements OnInit {
     if(this.directory === '' && this.currentCommand.split(' ')[1] === 'introduction.txt') {
       this.commands.push({
         command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-        output: `Hey, I'm Abdulrahman Almehdar<br>Web Developer<br><br> I Graduated from King Abdulaziz University with a bachelor's degree in Information Technology
-        with a GPA of 4.87 / 5. I have a passion for web development and all things
+        output: `Hey, I'm Abdulrahman Almehdar<br>Web Developer<br><br> I have a passion for web development and all things
         front-end and back-end.
         I enjoy exploring
         new technologies, especially in areas such as cloud computing and virtualization. Always
