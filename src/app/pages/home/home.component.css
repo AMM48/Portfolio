@@ -1,7 +1,7 @@
 
 
 main {
-    background: linear-gradient(180deg, #3b538d 0%, #182848 50%,#151515 100%);
+    background: linear-gradient(180deg, #0d4785 0%, #182848 50%,#151515 100%);
 }
 
 .content {
@@ -11,7 +11,7 @@ main {
 
 .projects-btn {
     font-size: clamp(1.8rem, 1vw + 1rem, 2.5rem);
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     padding: 2rem;
     display: inline-block;
     border-radius: 1rem;
@@ -19,7 +19,7 @@ main {
 
 .cli-btn {
     position: fixed;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     font-size: clamp(1.2rem, 1vw + 1rem ,1.8rem);
     padding: 0.5rem 2rem;
     transition: all 0.5s ease-out;
@@ -63,7 +63,7 @@ main {
     .projects-btn:hover, .cli-btn:hover {
         border-color: rgba(255, 255, 255, 1);
         color: rgba(255, 255, 255, 1);
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.08);
     }
     .cli-btn{
     color: rgba(255, 255, 255, 0.6);

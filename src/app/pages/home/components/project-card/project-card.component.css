@@ -14,7 +14,7 @@
 
 .explore-btn {
     font-size: clamp(1.4rem, 1vw + 1rem ,1.8rem);
-    background-color: rgb(255, 255, 255, 0.1);
+    background-color: rgb(170, 111, 0);
     padding: 0.5rem 2rem; 
 }
 
@@ -43,7 +43,7 @@
     }
     .container:hover {
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-        transform: scale(1.02);
+        transform: scale(1.01);
     }
 }
 
