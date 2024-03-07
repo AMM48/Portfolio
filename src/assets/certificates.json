@@ -1,13 +1,17 @@
 [
   {
+	"src": "assets/certificates/AWS-SAA.jpg",
+    "alt": "AWS Solutions Architect Associate Certification"
+  },
+  {
     "src": "assets/certificates/AWS-Cloud-Practitioner.jpg",
     "alt": "AWS Cloud Practitioner Certification"
   },
   {
-    "src": "assets/certificates/N+.jpg",
+    "src": "assets/certificates/NPlus.jpg",
     "alt": "CompTIA Network+ Certification"
   },
-  { "src": "assets/certificates/A+.jpg", "alt": "CompTIA A+ Certification" },
+  { "src": "assets/certificates/APlus.jpg", "alt": "CompTIA A+ Certification" },
   {
     "src": "assets/certificates/AZ-900.jpg",
     "alt": "Azure Fundamentals (AZ-900) Certification"
