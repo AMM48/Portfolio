@@ -1,5 +1,9 @@
 [
   {
+	"src": "assets/certificates/CCNA.jpg",
+    "alt": "CCNA Certification"
+  },
+  {
 	"src": "assets/certificates/AWS-SAA.jpg",
     "alt": "AWS Solutions Architect Associate Certification"
   },

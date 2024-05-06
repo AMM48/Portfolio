@@ -99,7 +99,7 @@ export class CliComponent implements OnInit {
       case '/certificates':
         this.commands.push({
           command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-          output: 'AWS-SAA.txt&nbsp;&nbsp;AWS-Cloud-Practitioner.txt&nbsp;&nbsp;CompTIA-Network+.txt&nbsp;&nbsp;CompTIA-A+.txt&nbsp;&nbsp;AZ-900.txt&nbsp;&nbsp;THM-JRPenTester.txt',
+          output: 'CCNA.txt&nbsp;&nbsp;AWS-SAA.txt&nbsp;&nbsp;AWS-Cloud-Practitioner.txt&nbsp;&nbsp;CompTIA-Network+.txt&nbsp;&nbsp;CompTIA-A+.txt&nbsp;&nbsp;AZ-900.txt&nbsp;&nbsp;THM-JRPenTester.txt',
           class: 'color'
         });
         break;
@@ -181,7 +181,13 @@ export class CliComponent implements OnInit {
           class: 'color wrap-text'
         });
       }
-    } else if (this.directory === '/certificates' && this.currentCommand.split(' ')[1] === 'aws-saa.txt') {
+    } else if (this.directory === '/certificates' && this.currentCommand.split(' ')[1] === 'ccna.txt') {
+      this.commands.push({
+        command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
+        output: `To view the Cisco CCNA Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/CCNA.jpg" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
+        class: 'color'
+      });
+    }else if (this.directory === '/certificates' && this.currentCommand.split(' ')[1] === 'aws-saa.txt') {
       this.commands.push({
         command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
         output: `To view the AWS Solutions Architect Associate Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/AWS-SAA.jpg" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
