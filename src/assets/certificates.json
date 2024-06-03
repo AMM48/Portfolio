@@ -15,13 +15,5 @@
     "src": "assets/certificates/NPlus.jpg",
     "alt": "CompTIA Network+ Certification"
   },
-  { "src": "assets/certificates/APlus.jpg", "alt": "CompTIA A+ Certification" },
-  {
-    "src": "assets/certificates/AZ-900.jpg",
-    "alt": "Azure Fundamentals (AZ-900) Certification"
-  },
-  {
-    "src": "assets/certificates/THM-JRPenTester.png",
-    "alt": "TryHackMe Junior Penetration Tester Certification"
-  }
+  { "src": "assets/certificates/APlus.jpg", "alt": "CompTIA A+ Certification" }
 ]

@@ -1,13 +1,13 @@
-
 footer {
     padding: 2rem 0;
-    border-top: 1px solid #e9ecef5a;
+    border-top: 0.5px solid #e9ecef5a;
     text-align: center;
     color: #909090;
+    background-color: hsl(212, 24%, 20%);
 }
 
 footer p {
-    font-size: clamp(1rem, 1vw + 1rem,1.5rem);  
+    font-size: clamp(1rem, 1vw + 1rem, 1.5rem);
     margin: 0.7rem 0 0 0;
 }
 
@@ -19,22 +19,24 @@ ng-icon {
 #github {
     margin-right: 2.5rem;
 }
-    
+
 #linkedin:hover {
     color: #0044ff;
     background-color: #fff;
 }
- 
+
 #github:hover {
     color: #fff;
 }
+
 a {
     color: inherit;
 }
+
 @media screen and (max-width: 1024px) {
     #linkedin {
         color: #0044ff;
-    background-color: #fff;
+        background-color: #fff;
     }
 
     #github {

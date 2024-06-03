@@ -1,13 +1,12 @@
-
 img {
   width: 100%;
-  border-radius: 1rem;
+  border-radius: 2rem;
+  transition: all 0.3s ease-in-out;
 }
 
 @media screen and (min-width: 768px) {
   img {
     width: 75%;
-    border-radius: 2rem;
   }
 }
 
@@ -18,6 +17,6 @@ img {
 }
 
 swiper-container::part(bullet-active) {
-  background-color: rgba(255, 166, 0, 0.65);
+  background-color: #f08c00;
   padding: 0.1rem;
 }
