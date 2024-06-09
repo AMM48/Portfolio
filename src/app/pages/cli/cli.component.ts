@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import {LoadDataDirective} from '../../directives/load-data.directive';
+import { LoadDataDirective } from '../../directives/load-data.directive';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { Project } from '../home/components/interfaces/Project.interface';
@@ -19,7 +19,7 @@ export class CliComponent implements OnInit {
     console.log(this.projects);
   }
 
-  constructor(private rendered: Renderer2, private titleService: Title, private router: Router) {}
+  constructor(private rendered: Renderer2, private titleService: Title, private router: Router) { }
   @ViewChild('textarea') textarea!: ElementRef;
   @ViewChild('cursor') cursor!: ElementRef;
 
@@ -28,7 +28,7 @@ export class CliComponent implements OnInit {
   currentCommand: string = '';
   directory: string = '';
   inputValue: string = '';
-  
+
   ngOnInit() {
     this.titleService.setTitle("AMM's | CLI");
   }
@@ -55,27 +55,27 @@ export class CliComponent implements OnInit {
         this.commands.push({
           command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
         });
-      } 
+      }
       else if (this.currentCommand === 'ls') {
-       this.handleLs();
-      } 
+        this.handleLs();
+      }
       else if (this.currentCommand.split(' ')[0] === 'cd') {
-         this.handleCd();
-    } else if (this.currentCommand.split(' ')[0] === 'cat') {
-      this.handleCat();
-    } else if (this.currentCommand === 'clear') {
-      this.commands.length = 0;
-    } else if (this.currentCommand === 'gui') {
-      this.router.navigate(['/']);
-    } else if (this.currentCommand === 'help') {
+        this.handleCd();
+      } else if (this.currentCommand.split(' ')[0] === 'cat') {
+        this.handleCat();
+      } else if (this.currentCommand === 'clear') {
+        this.commands.length = 0;
+      } else if (this.currentCommand === 'gui') {
+        this.router.navigate(['/']);
+      } else if (this.currentCommand === 'help') {
         this.handleHelp();
       } else {
-      this.commands.push({
-        command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-        output: `Command '${this.currentCommand}' not found, try 'help' to see a list of available commands`,
-        class: 'color'
-      });
-    }
+        this.commands.push({
+          command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
+          output: `Command '${this.currentCommand}' not found, try 'help' to see a list of available commands`,
+          class: 'color'
+        });
+      }
       this.inputValue = '';
     }
   }
@@ -92,14 +92,14 @@ export class CliComponent implements OnInit {
       case '/projects':
         this.commands.push({
           command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-          output: 'Expense-Tracker.txt&nbsp;&nbsp;&nbsp;Online-Grocery-Store.txt&nbsp;&nbsp;&nbsp;Organizo.txt',
+          output: 'Expense-Tracker.txt&nbsp;&nbsp;&nbsp;Multi-Tier-Architecture.txt&nbsp;&nbsp;&nbsp;S3-Static-Website.txt&nbsp;&nbsp;&nbsp;Serverless-Email-Reminder.txt',
           class: 'color'
         });
         break;
       case '/certificates':
         this.commands.push({
           command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-          output: 'CCNA.txt&nbsp;&nbsp;AWS-SAA.txt&nbsp;&nbsp;AWS-Cloud-Practitioner.txt&nbsp;&nbsp;CompTIA-Network+.txt&nbsp;&nbsp;CompTIA-A+.txt&nbsp;&nbsp;AZ-900.txt&nbsp;&nbsp;THM-JRPenTester.txt',
+          output: 'CCNA.txt&nbsp;&nbsp;AWS-SAA.txt&nbsp;&nbsp;AWS-Cloud-Practitioner.txt&nbsp;&nbsp;CompTIA-Network+.txt&nbsp;&nbsp;CompTIA-A+.txt',
           class: 'color'
         });
         break;
@@ -114,25 +114,25 @@ export class CliComponent implements OnInit {
   }
 
   handleCd(): void {
-    if(this.currentCommand.split(' ')[1] == undefined || this.currentCommand.split(' ')[1] === '..'){
+    if (this.currentCommand.split(' ')[1] == undefined || this.currentCommand.split(' ')[1] === '..') {
       this.commands.push({
         command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
         output: ``,
       });
       this.directory = '';
-    } else if(this.directory === '' && this.currentCommand.split(' ')[1] === 'projects') {
+    } else if (this.directory === '' && this.currentCommand.split(' ')[1] === 'projects') {
       this.commands.push({
         command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
         output: ``,
       });
       this.directory = '/projects';
-    } else if(this.directory === '' && this.currentCommand.split(' ')[1] === 'certificates') {
+    } else if (this.directory === '' && this.currentCommand.split(' ')[1] === 'certificates') {
       this.commands.push({
         command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
         output: ``,
       });
       this.directory = '/certificates';
-    } else  {
+    } else {
       this.commands.push({
         command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
         output: `-bash: cd: ${this.currentCommand.split(' ')[1]}: No such file or directory`,
@@ -142,15 +142,14 @@ export class CliComponent implements OnInit {
   }
 
   handleCat(): void {
-    if(this.directory === '' && this.currentCommand.split(' ')[1] === 'introduction.txt') {
+    if (this.directory === '' && this.currentCommand.split(' ')[1] === 'introduction.txt') {
       this.commands.push({
         command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-        output: `Hey, I'm Abdulrahman Almehdar<br>Web Developer<br><br> I have a passion for web development and all things
-        front-end and back-end.
-        I enjoy exploring
-        new technologies, especially in areas such as cloud computing and virtualization. Always
-        eager to learn and adapt, I'm dedicated to creating and enhancing robust web solutions.`, class: 'color wrap-text'
-      }, );
+        output: `Hey, I'm Abdulrahman Almehdar<br>IT Fresh Graduate<br><br> I'm passionate about AWS, Docker, Terraform, and Python with a strong foundation in managing IT
+        infrastructure and automating tasks. Demonstrated adaptability and quick learning, with the ability
+        to quickly grasp and implement new technologies. Ready to leverage skills in cloud and network
+        technologies to drive innovation and efficiency.`, class: 'color wrap-text'
+      },);
     } else if (this.directory === '/projects' && this.currentCommand.split(' ')[1] === 'expense-tracker.txt') {
       const project = this.projects.find(p => p.name === "Expense Tracker");
 
@@ -161,8 +160,8 @@ export class CliComponent implements OnInit {
           class: 'color wrap-text'
         });
       }
-    } else if (this.directory === '/projects' && this.currentCommand.split(' ')[1] === 'online-grocery-store.txt') {
-      const project = this.projects.find(p => p.name === "Online Grocery Store");
+    } else if (this.directory === '/projects' && this.currentCommand.split(' ')[1] === 'multi-tier-architecture.txt') {
+      const project = this.projects.find(p => p.name === "Multi-Tier Architecture");
 
       if (project) {
         this.commands.push({
@@ -171,8 +170,18 @@ export class CliComponent implements OnInit {
           class: 'color wrap-text'
         });
       }
-    } else if (this.directory === '/projects' && this.currentCommand.split(' ')[1] === 'organizo.txt') {
-      const project = this.projects.find(p => p.name === "Organizo");
+    } else if (this.directory === '/projects' && this.currentCommand.split(' ')[1] === 's3-static-website.txt') {
+      const project = this.projects.find(p => p.name === "S3 Static Website");
+
+      if (project) {
+        this.commands.push({
+          command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
+          output: `${project.name}<br><br>${project.description}<br><br>To view the project <a href="${project.link}" target="_blank" rel="noopener noreferrer"> (Click here &#x2197;)</a>`,
+          class: 'color wrap-text'
+        });
+      }
+    } else if (this.directory === '/projects' && this.currentCommand.split(' ')[1] === 'serverless-email-reminder.txt') {
+      const project = this.projects.find(p => p.name === "Serverless Email Reminder");
 
       if (project) {
         this.commands.push({
@@ -187,7 +196,7 @@ export class CliComponent implements OnInit {
         output: `To view the Cisco CCNA Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/CCNA.jpg" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
         class: 'color'
       });
-    }else if (this.directory === '/certificates' && this.currentCommand.split(' ')[1] === 'aws-saa.txt') {
+    } else if (this.directory === '/certificates' && this.currentCommand.split(' ')[1] === 'aws-saa.txt') {
       this.commands.push({
         command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
         output: `To view the AWS Solutions Architect Associate Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/AWS-SAA.jpg" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
@@ -211,32 +220,21 @@ export class CliComponent implements OnInit {
         output: `To view the CompTIA A+ Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/APlus.jpg" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
         class: 'color'
       });
-    } else if (this.directory === '/certificates' && this.currentCommand.split(' ')[1] === 'az-900.txt') {
-      this.commands.push({
-        command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-        output: `To view the AZ-900 Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/AZ-900.jpg" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
-        class: 'color'
-      });
-    }else if (this.directory === '/certificates' && this.currentCommand.split(' ')[1] === 'thm-jrpentester.txt') {
-      this.commands.push({
-        command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-        output: `To view the TryHackMe Jr Penetration Tester Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/THM-JRPenTester.png" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
-        class: 'color'
-      });
     }
-    
-    else if(this.currentCommand.split(' ')[1] === undefined){
+
+    else if (this.currentCommand.split(' ')[1] === undefined) {
       this.commands.push({
         command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
         output: `Usage: cat [Filename]`,
         class: 'color'
       });
-    } else{
+    } else {
       this.commands.push({
         command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
         output: `cat: ${this.currentCommand.split(' ')[1]}: No such file or directory`,
         class: 'color'
-      });} 
+      });
+    }
   }
 
   handleHelp(): void {

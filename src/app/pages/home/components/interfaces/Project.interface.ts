@@ -3,4 +3,5 @@ export interface Project {
     name: String,
     description: String,
     link: String,
+    tools: [{ [key: string]: string }];
 }

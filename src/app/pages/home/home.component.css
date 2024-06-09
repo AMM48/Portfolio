@@ -1,7 +1,5 @@
-
-
 main {
-    background: linear-gradient(180deg, #0d4785 0%, #182848 50%,#151515 100%);
+    background: #2a3644
 }
 
 .content {
@@ -11,61 +9,119 @@ main {
 
 .projects-btn {
     font-size: clamp(1.8rem, 1vw + 1rem, 2.5rem);
-    border: 1px solid #fff;
-    padding: 2rem;
+    border: 1px solid rgba(240, 140, 0, 1);
+    color: #2a3644;
+    padding: 1.8rem 3rem;
     display: inline-block;
-    border-radius: 1rem;
+    border-radius: 5rem;
+    background-color: rgba(240, 140, 0, 1);
+    transition: all 0.3s ease-in-out;
 }
 
 .cli-btn {
+    border-radius: 3rem;
     position: fixed;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    font-size: clamp(1.2rem, 1vw + 1rem ,1.8rem);
+    border: 1px solid rgba(240, 140, 0, 1);
+    font-size: clamp(1.2rem, 1vw + 1rem, 1.8rem);
     padding: 0.5rem 2rem;
-    transition: all 0.5s ease-out;
     display: inline;
     margin: 2rem 2rem 0 0;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease-in-out;
     top: 0;
     right: 0;
     z-index: 10000;
 }
 
-.projects-section{
+.projects-section {
     min-height: 50vh;
 }
 
 .landing-content {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
-@media (min-width: 768px) {
+.landing-content div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
     p {
         padding: 0 10rem;
     }
+
+    .projects-btn,
+    .cli-btn {
+        border-radius: 1.5rem;
+        transition: all 0.3s ease-in-out;
+    }
 }
 
-@media (min-width: 1024px) {
-    .landing-content > div {
+@media (min-width: 1025px) {
+    .landing-content>div {
         padding: 0 20rem;
     }
 
-    .projects-btn {
-        border-color: rgba(255, 255, 255, 0.6);
-        color: rgba(255, 255, 255, 0.6);
-        transition: all 0.5s ease;
+    .projects-btn,
+    .cli-btn {
+        transition: all 0.3s ease-in-out;
+        border-radius: 0.5rem;
+        background-color: rgba(255, 255, 255, 0);
+        color: rgba(255, 255, 255, 1);
+        z-index: 1;
+        position: relative;
+        overflow: hidden;
     }
 
-    .projects-btn:hover, .cli-btn:hover {
-        border-color: rgba(255, 255, 255, 1);
-        color: rgba(255, 255, 255, 1);
-        background-color: rgba(255, 255, 255, 0.08);
+    .cli-btn {
+        position: fixed;
     }
-    .cli-btn{
-    color: rgba(255, 255, 255, 0.6);
+
+    .projects-btn::before,
+    .projects-btn::after,
+    .cli-btn::before,
+    .cli-btn::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(240, 140, 0, 1);
+        z-index: -1;
+        transition: transform 0.35s ease-in-out;
+    }
+
+    .projects-btn::before,
+    .cli-btn::before {
+        transform: scaleX(0) scaleY(0);
+        transform-origin: top left;
+        border-radius: 0.5rem 0.5rem 3rem 0.5rem;
+    }
+
+    .projects-btn::after,
+    .cli-btn::after {
+        transform: scaleX(0) scaleY(0);
+        transform-origin: bottom right;
+        border-radius: 3rem 0.5rem 0.5rem 0.5rem;
+    }
+
+    .projects-btn:hover::before,
+    .projects-btn:hover::after,
+    .cli-btn:hover::before,
+    .cli-btn:hover::after {
+        transform: scaleX(1);
+    }
+
+    .projects-btn:hover,
+    .cli-btn:hover {
+        color: #2a3644;
+        letter-spacing: 0.05rem;
+        box-shadow: 0px 0px 12px -2px rgba(240, 140, 0, 1);
     }
 }
