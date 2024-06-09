@@ -92,14 +92,14 @@ export class CliComponent implements OnInit {
       case '/projects':
         this.commands.push({
           command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-          output: 'Expense-Tracker.txt&nbsp;&nbsp;&nbsp;Online-Grocery-Store.txt&nbsp;&nbsp;&nbsp;Organizo.txt',
+          output: 'Expense-Tracker.txt&nbsp;&nbsp;&nbsp;Multi-Tier-Architecture.txt&nbsp;&nbsp;&nbsp;S3-Static-Website.txt&nbsp;&nbsp;&nbsp;Serverless-Email-Reminder.txt',
           class: 'color'
         });
         break;
       case '/certificates':
         this.commands.push({
           command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-          output: 'CCNA.txt&nbsp;&nbsp;AWS-SAA.txt&nbsp;&nbsp;AWS-Cloud-Practitioner.txt&nbsp;&nbsp;CompTIA-Network+.txt&nbsp;&nbsp;CompTIA-A+.txt&nbsp;&nbsp;AZ-900.txt&nbsp;&nbsp;THM-JRPenTester.txt',
+          output: 'CCNA.txt&nbsp;&nbsp;AWS-SAA.txt&nbsp;&nbsp;AWS-Cloud-Practitioner.txt&nbsp;&nbsp;CompTIA-Network+.txt&nbsp;&nbsp;CompTIA-A+.txt',
           class: 'color'
         });
         break;
@@ -160,8 +160,8 @@ export class CliComponent implements OnInit {
           class: 'color wrap-text'
         });
       }
-    } else if (this.directory === '/projects' && this.currentCommand.split(' ')[1] === 'online-grocery-store.txt') {
-      const project = this.projects.find(p => p.name === "Online Grocery Store");
+    } else if (this.directory === '/projects' && this.currentCommand.split(' ')[1] === 'multi-tier-architecture.txt') {
+      const project = this.projects.find(p => p.name === "Multi-Tier Architecture");
 
       if (project) {
         this.commands.push({
@@ -170,8 +170,18 @@ export class CliComponent implements OnInit {
           class: 'color wrap-text'
         });
       }
-    } else if (this.directory === '/projects' && this.currentCommand.split(' ')[1] === 'organizo.txt') {
-      const project = this.projects.find(p => p.name === "Organizo");
+    } else if (this.directory === '/projects' && this.currentCommand.split(' ')[1] === 's3-static-website.txt') {
+      const project = this.projects.find(p => p.name === "S3 Static Website");
+
+      if (project) {
+        this.commands.push({
+          command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
+          output: `${project.name}<br><br>${project.description}<br><br>To view the project <a href="${project.link}" target="_blank" rel="noopener noreferrer"> (Click here &#x2197;)</a>`,
+          class: 'color wrap-text'
+        });
+      }
+    } else if (this.directory === '/projects' && this.currentCommand.split(' ')[1] === 'serverless-email-reminder.txt') {
+      const project = this.projects.find(p => p.name === "Serverless Email Reminder");
 
       if (project) {
         this.commands.push({
@@ -208,18 +218,6 @@ export class CliComponent implements OnInit {
       this.commands.push({
         command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
         output: `To view the CompTIA A+ Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/APlus.jpg" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
-        class: 'color'
-      });
-    } else if (this.directory === '/certificates' && this.currentCommand.split(' ')[1] === 'az-900.txt') {
-      this.commands.push({
-        command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-        output: `To view the AZ-900 Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/AZ-900.jpg" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
-        class: 'color'
-      });
-    } else if (this.directory === '/certificates' && this.currentCommand.split(' ')[1] === 'thm-jrpentester.txt') {
-      this.commands.push({
-        command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-        output: `To view the TryHackMe Jr Penetration Tester Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/THM-JRPenTester.png" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
         class: 'color'
       });
     }

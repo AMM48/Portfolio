@@ -1,10 +1,10 @@
 [
   {
-	"src": "assets/certificates/CCNA.jpg",
+    "src": "assets/certificates/CCNA.jpg",
     "alt": "CCNA Certification"
   },
   {
-	"src": "assets/certificates/AWS-SAA.jpg",
+    "src": "assets/certificates/AWS-SAA.jpeg",
     "alt": "AWS Solutions Architect Associate Certification"
   },
   {
@@ -15,5 +15,8 @@
     "src": "assets/certificates/NPlus.jpg",
     "alt": "CompTIA Network+ Certification"
   },
-  { "src": "assets/certificates/APlus.jpg", "alt": "CompTIA A+ Certification" }
+  {
+    "src": "assets/certificates/APlus.jpg",
+    "alt": "CompTIA A+ Certification"
+  }
 ]

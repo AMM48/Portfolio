@@ -11,7 +11,7 @@ main {
     font-size: clamp(1.8rem, 1vw + 1rem, 2.5rem);
     border: 1px solid rgba(240, 140, 0, 1);
     color: #2a3644;
-    padding: 2rem;
+    padding: 1.8rem 3rem;
     display: inline-block;
     border-radius: 5rem;
     background-color: rgba(240, 140, 0, 1);
@@ -43,19 +43,26 @@ main {
     min-height: 100vh;
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+.landing-content div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
     p {
         padding: 0 10rem;
     }
 
     .projects-btn,
     .cli-btn {
-        border-radius: 1rem;
+        border-radius: 1.5rem;
         transition: all 0.3s ease-in-out;
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     .landing-content>div {
         padding: 0 20rem;
     }
@@ -63,11 +70,12 @@ main {
     .projects-btn,
     .cli-btn {
         transition: all 0.3s ease-in-out;
-        border-radius: 0rem;
+        border-radius: 0.5rem;
         background-color: rgba(255, 255, 255, 0);
         color: rgba(255, 255, 255, 1);
         z-index: 1;
         position: relative;
+        overflow: hidden;
     }
 
     .cli-btn {
@@ -93,12 +101,14 @@ main {
     .cli-btn::before {
         transform: scaleX(0) scaleY(0);
         transform-origin: top left;
+        border-radius: 0.5rem 0.5rem 3rem 0.5rem;
     }
 
     .projects-btn::after,
     .cli-btn::after {
         transform: scaleX(0) scaleY(0);
         transform-origin: bottom right;
+        border-radius: 3rem 0.5rem 0.5rem 0.5rem;
     }
 
     .projects-btn:hover::before,
