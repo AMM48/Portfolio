@@ -199,7 +199,7 @@ export class CliComponent implements OnInit {
     } else if (this.directory === '/certificates' && this.currentCommand.split(' ')[1] === 'aws-saa.txt') {
       this.commands.push({
         command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-        output: `To view the AWS Solutions Architect Associate Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/AWS-SAA.jpg" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
+        output: `To view the AWS Solutions Architect Associate Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/AWS-SAA.jpeg" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
         class: 'color'
       });
     } else if (this.directory === '/certificates' && this.currentCommand.split(' ')[1] === 'aws-cloud-practitioner.txt') {
