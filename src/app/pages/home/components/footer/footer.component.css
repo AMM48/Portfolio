@@ -1,7 +1,6 @@
 footer {
     padding: 2rem 0;
     text-align: center;
-    color: #909090;
     background: linear-gradient(220deg, rgba(0, 0, 0, .75), #2a3644);
 }
 
@@ -13,41 +12,30 @@ footer div {
 }
 
 footer p {
-    font-size: clamp(1rem, 1vw + 1rem, 1.5rem);
+    font-size: clamp(1rem, 0.5vw + 1rem, 1.5rem);
     margin: 0.7rem 0 0 0;
+    color: #909090;
 }
 
+#linkedin,
 #github {
-    margin-right: 2.5rem;
-    fill: #909090;
+    fill: rgb(144, 144, 144, 1);
     transition: all .3s ease-in-out;
-}
-
-#linkedin {
-    fill: #909090;
-    transition: all .3s ease-in-out;
-}
-
-
-a {
-    color: inherit;
 }
 
 @media not (max-width: 1024px) {
     #linkedin:hover {
-        fill: #0044ff;
-        /* background-color: #fff; */
+        fill: #0078d4;
     }
 
     #github:hover {
         fill: #fff;
     }
-
 }
 
 @media screen and (max-width: 1024px) {
     #linkedin {
-        fill: #0044ff;
+        fill: #0078d4;
     }
 
     #github {
