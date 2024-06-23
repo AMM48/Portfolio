@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ProjectCardComponent } from "./components/project-card/project-card.component";
 import { fadeAnimtaion } from './animations/fade.animation';
 import { CertificatesSliderComponent } from "./components/certificates-slider/certificates-slider.component";
 import { FooterComponent } from "./components/footer/footer.component";
-import { Title } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-home',
@@ -13,9 +12,5 @@ import { Title } from '@angular/platform-browser';
     animations: [fadeAnimtaion],
     imports: [ProjectCardComponent, CertificatesSliderComponent, FooterComponent]
 })
-export class HomeComponent implements OnInit {
-    constructor(private titleService: Title) { }
-    ngOnInit() {
-        this.titleService.setTitle("AMM's");
-      }
+export class HomeComponent {
 }

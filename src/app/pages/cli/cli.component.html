@@ -13,10 +13,10 @@
         }
     </div>
     <div id="input" class="input-container">
-
-        <span class="prompt">Abdulrahman&#64;Almehdar:~{{directory}}$</span>
+        <span class="prompt">
+            <h1>Abdulrahman&#64;Almehdar:~{{directory}}$</h1>
+        </span>
         <span class="text">{{inputValue}}<span #cursor class="cursor"></span></span>
-
         <textarea #textarea autofocus type="text" [(ngModel)]="inputValue"
             (keydown)="executeCommand($event)"></textarea>
     </div>

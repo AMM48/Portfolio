@@ -30,7 +30,7 @@ export class CliComponent implements OnInit {
   inputValue: string = '';
 
   ngOnInit() {
-    this.titleService.setTitle("AMM's | CLI");
+    this.titleService.setTitle("CLI | Abdulrahman Almehdar Portfolio");
   }
   ngAfterViewInit() {
     this.blink();
@@ -193,31 +193,31 @@ export class CliComponent implements OnInit {
     } else if (this.directory === '/certificates' && this.currentCommand.split(' ')[1] === 'ccna.txt') {
       this.commands.push({
         command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-        output: `To view the Cisco CCNA Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/CCNA.jpg" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
+        output: `To view the Cisco CCNA Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/CCNA.webp" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
         class: 'color'
       });
     } else if (this.directory === '/certificates' && this.currentCommand.split(' ')[1] === 'aws-saa.txt') {
       this.commands.push({
         command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-        output: `To view the AWS Solutions Architect Associate Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/AWS-SAA.jpeg" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
+        output: `To view the AWS Solutions Architect Associate Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/AWS-SAA.webp" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
         class: 'color'
       });
     } else if (this.directory === '/certificates' && this.currentCommand.split(' ')[1] === 'aws-cloud-practitioner.txt') {
       this.commands.push({
         command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-        output: `To view the AWS Cloud Practitioner Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/AWS-Cloud-Practitioner.jpg" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
+        output: `To view the AWS Cloud Practitioner Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/AWS-Cloud-Practitioner.webp" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
         class: 'color'
       });
     } else if (this.directory === '/certificates' && this.currentCommand.split(' ')[1] === 'comptia-network+.txt') {
       this.commands.push({
         command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-        output: `To view the CompTIA Network+ Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/NPlus.jpg" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
+        output: `To view the CompTIA Network+ Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/NPlus.webp" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
         class: 'color'
       });
     } else if (this.directory === '/certificates' && this.currentCommand.split(' ')[1] === 'comptia-a+.txt') {
       this.commands.push({
         command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-        output: `To view the CompTIA A+ Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/APlus.jpg" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
+        output: `To view the CompTIA A+ Certificate <a href="https://raw.githubusercontent.com/AMM48/Portfolio/main/src/assets/certificates/APlus.webp" target=_blank rel="noopener noreferrer">(Click here &#x2197;)</a>`,
         class: 'color'
       });
     }

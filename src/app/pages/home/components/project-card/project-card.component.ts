@@ -31,7 +31,4 @@ export class ProjectCardComponent {
   trackById(index: number, item: any): number {
     return item.id;
   }
-
-
-
 } 

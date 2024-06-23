@@ -31,6 +31,9 @@
           },
           "configurations": {
             "production": {
+              "optimization": true,
+              "aot": true,
+              "extractLicenses": true,
               "budgets": [
                 {
                   "type": "initial",
