@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /cli
+Sitemap: https://aalmehdar.com/sitemap.xml
