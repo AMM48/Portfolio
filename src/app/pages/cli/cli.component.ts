@@ -30,7 +30,7 @@ export class CliComponent implements OnInit {
   inputValue: string = '';
 
   ngOnInit() {
-    this.titleService.setTitle("CLI | Abdulrahman Almehdar Portfolio");
+    this.titleService.setTitle("CLI | Abdulrahman Almehdar's Portfolio");
   }
   ngAfterViewInit() {
     this.blink();
