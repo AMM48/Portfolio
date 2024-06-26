@@ -3,6 +3,7 @@ import { ProjectCardComponent } from "./components/project-card/project-card.com
 import { fadeAnimtaion } from './animations/fade.animation';
 import { CertificatesSliderComponent } from "./components/certificates-slider/certificates-slider.component";
 import { FooterComponent } from "./components/footer/footer.component";
+import { Title } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-home',
@@ -13,4 +14,8 @@ import { FooterComponent } from "./components/footer/footer.component";
     imports: [ProjectCardComponent, CertificatesSliderComponent, FooterComponent]
 })
 export class HomeComponent {
+    constructor(private titleService: Title) { }
+    ngOnInit() {
+        this.titleService.setTitle("Home | Abdulrahman Almehdar's Portfolio");
+    }
 }
