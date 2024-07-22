@@ -92,7 +92,7 @@ export class CliComponent implements OnInit {
       case '/projects':
         this.commands.push({
           command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
-          output: 'Expense-Tracker.txt&nbsp;&nbsp;&nbsp;Multi-Tier-Architecture.txt&nbsp;&nbsp;&nbsp;S3-Static-Website.txt&nbsp;&nbsp;&nbsp;Serverless-Email-Reminder.txt',
+          output: 'Expense-Tracker.txt&nbsp;&nbsp;&nbsp;Multi-Tier-Architecture.txt&nbsp;&nbsp;&nbsp;S3-Static-Website.txt&nbsp;&nbsp;&nbsp;Serverless-Email-Reminder.txt&nbsp;&nbsp;&nbsp;ClusterDeploy.txt',
           class: 'color'
         });
         break;
@@ -182,6 +182,16 @@ export class CliComponent implements OnInit {
       }
     } else if (this.directory === '/projects' && this.currentCommand.split(' ')[1] === 'serverless-email-reminder.txt') {
       const project = this.projects.find(p => p.name === "Serverless Email Reminder");
+
+      if (project) {
+        this.commands.push({
+          command: `Abdulrahman@Almehdar:~${this.directory}$ ${this.inputValue}`,
+          output: `${project.name}<br><br>${project.description}<br><br>To view the project <a href="${project.link}" target="_blank" rel="noopener noreferrer"> (Click here &#x2197;)</a>`,
+          class: 'color wrap-text'
+        });
+      }
+    } else if (this.directory === '/projects' && this.currentCommand.split(' ')[1] === 'clusterdeploy.txt') {
+      const project = this.projects.find(p => p.name === "ClusterDeploy");
 
       if (project) {
         this.commands.push({
