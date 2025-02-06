@@ -50,7 +50,7 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
       with:
-        github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         publish_dir: ./dist/my-portfolio/browser/
         external_repository: AMM48/AMM48.github.io
         publish_branch: main 
