@@ -51,7 +51,7 @@ jobs:
       uses: peaceiris/actions-gh-pages@v4
       with:
         deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        publish_dir: ./dist/my-portfolio/browser/
+        publish_dir: ./dist/my-portfolio/
         external_repository: AMM48/AMM48.github.io
         publish_branch: main 
         keep_files: false
