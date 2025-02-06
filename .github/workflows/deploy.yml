@@ -55,3 +55,4 @@ jobs:
         external_repository: AMM48/AMM48.github.io
         publish_branch: main 
         keep_files: false
+        full_commit_message: ${{ github.event.head_commit.message }}
